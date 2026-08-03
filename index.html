@@ -1,0 +1,55 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Calculator</title>
+<link rel="stylesheet" href="style.css">
+<script src="calc.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="wrap">
+    <p class="eyebrow">Know where you stand</p>
+    <h1>Attendance Calculator</h1>
+
+    <div class="card">
+      <div class="field">
+        <label for="total">Total classes held</label>
+        <input type="number" id="total" min="0" placeholder="e.g. 60" inputmode="numeric">
+      </div>
+
+      <div class="field">
+        <label for="present">Classes you attended</label>
+        <input type="number" id="present" min="0" placeholder="e.g. 48" inputmode="numeric">
+      </div>
+
+      <div class="field">
+        <label for="target">Target attendance %</label>
+        <input type="number" id="target" min="1" max="100" placeholder="e.g. 75" inputmode="numeric">
+      </div>
+
+      <button type="button" id="calcBtn">Calculate</button>
+
+      <p class="error" id="errorBox"></p>
+
+      <div class="stack" id="resultStack">
+        <div class="pill pill--1">
+          <div class="k">Current attendance</div>
+          <div class="v" id="pctValue">0%</div>
+          <div class="bar"><div class="bar-fill" id="pctBar"></div></div>
+        </div>
+        <div class="pill pill--2">
+          <div class="k" id="actionLabel">Classes needed</div>
+          <div class="v" id="actionValue">—</div>
+          <div class="sub" id="actionSub"></div>
+        </div>
+        <div class="pill pill--3" id="statusPill">
+          <div class="k">Status</div>
+          <div class="v" id="statusValue">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
